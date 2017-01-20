@@ -2,7 +2,9 @@
 Description=Run the a2dp auto-connecting script
 
 [Service]
+RemainAfterExit=yes,
 ExecStart=/usr/bin/blueberry on
+ExecStop=/usr/bin/blueberry off
 
 [Install]
 WantedBy=multi-user.target
