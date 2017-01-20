@@ -1,8 +1,8 @@
 [Unit]
-Description=Run the a2dp script
+Description=Run the a2dp auto-connecting script
 
 [Service]
-ExecStart=/usr/bin/blueberry
+ExecStart=/usr/bin/blueberry on
 
 [Install]
 WantedBy=multi-user.target
