@@ -1,0 +1,23 @@
+#! /bin/bash
+
+cd /usr/lib/blueberry;
+
+if [ $# -eq 0 ]; then
+    echo "usage: $0 on|off"
+
+elif [ $1 = "on" ]; then
+echo 'power on
+discoverable on
+pairable on
+quit' | bluetoothctl;
+bash -c "exec -a agent_bluetooth python simple-agent.py &"
+
+else
+echo 'power off
+quit' | bluetoothctl;
+pkill -f agent_bluetooth
+fi
+
+
+
+
