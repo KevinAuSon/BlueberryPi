@@ -1,0 +1,8 @@
+[Unit]
+Description=Run the a2dp script
+
+[Service]
+ExecStart=/usr/bin/blueberry
+
+[Install]
+WantedBy=multi-user.target
